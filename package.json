@@ -1,5 +1,5 @@
 {
-  "name": "hkidvalidator",
+  "name": "hkidtoolkit",
   "version": "1.0.0",
   "description": "A JavaScript library to validate Hong Kong ID card number",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VardyNg/hkidvalidator-js.git"
+    "url": "git+https://github.com/VardyNg/hkidtoolkit-js.git"
   },
   "author": "vardyng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VardyNg/hkidvalidator-js/issues"
+    "url": "https://github.com/VardyNg/hkidtoolkit-js/issues"
   },
-  "homepage": "https://github.com/VardyNg/hkidvalidator-js#readme"
+  "homepage": "https://github.com/VardyNg/hkidtoolkit-js#readme"
 }
