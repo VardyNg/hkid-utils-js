@@ -1,4 +1,6 @@
-
+import {
+  normalise,
+} from './util'
 export function validate(hkid: string) {
   console.log('validate', hkid);
 
@@ -6,5 +8,9 @@ export function validate(hkid: string) {
   const regex = /^[A-Za-z0-9()]+$/;
   if (!regex.test(hkid)) return false;
 
+  // normalise hkid for further processing
+  hkid = normalise(hkid);
+  
+  console.log('normalised hkid', hkid);
   return true;
 }
