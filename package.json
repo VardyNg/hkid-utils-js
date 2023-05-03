@@ -38,5 +38,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "@babel/preset-typescript": "^7.21.5"
+  }
 }
