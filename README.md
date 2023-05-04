@@ -15,6 +15,12 @@ A JavaScript library for validating Hong Kong Identity Card (HKID) numbers.
 ***
 <i>to be added when ready...</i>
 
+## Todo ✅
+- Main Features
+  - [ ] Validate HKID number
+  - [ ] Generate random HKID number
+- DevOps
+  - [ ] GitHub Actions pipeline to release package to NPM
 ## Contribution guidelines 📝
 ***
 - Fork the repository 🍴
