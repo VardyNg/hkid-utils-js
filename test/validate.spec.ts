@@ -21,5 +21,24 @@ describe ('test validate function', () => {
       // Assert
       expect(result).toBe(false);
     })
+
+    it.each([
+      ['A123456'], // invalid HKID with 7 characters
+      ['A1234567890'], // invalid HKID with 10 characters
+    ])('should return false if HKID is with invalid length', (HKID) => {
+      // Act
+      const result = validate(HKID);
+      // Assert
+      expect(result).toBe(false);
+    });
+
+    it('should return false if HKID does not start with letter', () => {
+      // Arrange
+      const HKID = '0123456(0)'; // invalid HKID with 7 characters
+      // Act
+      const result = validate(HKID);
+      // Assert
+      expect(result).toBe(false);
+    });
   });
 })

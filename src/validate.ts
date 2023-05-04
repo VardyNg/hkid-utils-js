@@ -1,16 +1,64 @@
 import {
   normalise,
-} from './util'
-export function validate(hkid: string) {
-  console.log('validate', hkid);
+  isCapitalLetter,
+} from './util';
 
-  // check if the id number only contains digits (0-9), letters in both case (A-Z, a-z) and brackets
+function containsValidCharacters(hkid: string): boolean {
   const regex = /^[A-Za-z0-9()]+$/;
-  if (!regex.test(hkid)) return false;
-
-  // normalise hkid for further processing
-  hkid = normalise(hkid);
-  
-  console.log('normalised hkid', hkid);
+  if (!regex.test(hkid)) {
+    throw new Error('HK ID contains invalid characters');
+  }
   return true;
+}
+
+function extractLeadingLetters(hkid: string): string {
+  let cap = '';
+  const firstChar = hkid.charAt(0);
+  if (isCapitalLetter(firstChar)) {
+    cap += firstChar;
+  } else {
+    throw new Error('HK ID does not start with a letter');
+  }
+  const secondChar = hkid.charAt(1);
+  if (isCapitalLetter(secondChar)) {
+    cap += secondChar;
+  }
+  return cap;
+}
+
+function extractNumbers(hkid: string, pointer: number): string {
+  return hkid.substring(pointer, pointer + 6);
+}
+
+function extractCheckDigit(hkid: string, pointer: number): string {
+  return hkid.charAt(pointer);
+}
+
+export function validate(hkid: string): boolean {
+  try {
+    containsValidCharacters(hkid);
+
+    const normalisedHkid = normalise(hkid);
+
+    if (normalisedHkid.length < 8 || normalisedHkid.length > 9) {
+      throw new Error('HK ID length is invalid');
+    }
+
+    const leadingLetters = extractLeadingLetters(normalisedHkid);
+
+    const numbers = extractNumbers(normalisedHkid, leadingLetters.length);
+
+    const checkDigit = extractCheckDigit(normalisedHkid, leadingLetters.length + numbers.length);
+
+    console.log('Leading Letters:', leadingLetters);
+    console.log('Numbers:', numbers);
+    console.log('Check Digit:', checkDigit);
+
+    // Add validation logic for leading letters, numbers, and check digit
+
+    return true;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
 }
