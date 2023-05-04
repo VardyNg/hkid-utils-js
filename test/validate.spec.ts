@@ -2,8 +2,10 @@ import { validate } from '../src/validate';
 
 describe ('test validate function', () => {
   describe('Valid HKID', () => {
-    const VALID_HKID = 'A123456(0)';
-    it('should return true if HKID is valid', () => {
+    it.each([
+      ['G123456(A)'],
+      ['AB987654(3)'],
+    ])('should return true if HKID is valid', (VALID_HKID) => {
       // Act
       const result = validate(VALID_HKID);
       // Assert
