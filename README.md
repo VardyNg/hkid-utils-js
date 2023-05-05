@@ -37,7 +37,7 @@ hkidUtils.validate('123(A)4')// false
   - [x] Validate HKID number
   - [ ] Generate random HKID number
 - DevOps
-  - [ ] GitHub Actions pipeline to release package to NPM
+  - [x] GitHub Actions pipeline to release package to NPM
 ## Contribution guidelines 📝
 Your contributions are always welcome! Even if it's just a typo or a missing comma, we'll appreciate it.
 - Fork the repository 🍴
