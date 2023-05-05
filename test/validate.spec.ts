@@ -4,7 +4,7 @@ describe ('test validate function', () => {
   describe('Valid HKID', () => {
     it.each([
       ['G123456(A)'],
-      ['AB987654(3)'],
+      ['aB987654(3)'],
       ['X3459387'],
     ])('should return true if HKID is valid', (VALID_HKID: string) => {
       // Act
