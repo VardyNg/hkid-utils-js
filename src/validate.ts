@@ -48,7 +48,6 @@ function validateRemainder(remainder: number, checksum: string){
   }
   
   valid = remainder === numCheckSum;
-  console.log('valid:', valid)
   if (!valid) {
     throw new Error('HK ID check digit is invalid');
   }
@@ -56,7 +55,6 @@ function validateRemainder(remainder: number, checksum: string){
 
 export function validate(hkid: string): boolean {
   try {
-    console.log('HK ID:', hkid);
     containsValidCharacters(hkid);
 
     const normalisedHkid = normalise(hkid);
@@ -71,9 +69,6 @@ export function validate(hkid: string): boolean {
 
     const checkDigit = extractCheckDigit(normalisedHkid, leadingLetters.length + numbers.length);
 
-    console.log('Leading Letters:', leadingLetters);
-    console.log('Numbers:', numbers);
-    console.log('Check Digit:', checkDigit);
 
     let checksum = 0;
     // calculate checksum for leading letters
@@ -81,14 +76,10 @@ export function validate(hkid: string): boolean {
     // Therefore, reduce 55 from the ASCII value to get the number
     if (leadingLetters.length === 2) {
       checksum += 9 * (leadingLetters.charCodeAt(0) - 55) % 11;
-      console.log(checksum)
       checksum += 8 * (leadingLetters.charCodeAt(1) - 55) % 11; 
-      console.log(checksum)
     } else {
       checksum += 9 * 36 % 11;
-      console.log(checksum)
       checksum += 8 * (leadingLetters.charCodeAt(0) - 55) % 11;
-      console.log(checksum)
     }
 
     // calculate checksum for numbers
@@ -97,13 +88,10 @@ export function validate(hkid: string): boolean {
       checksum += j * parseInt(numbers.charAt(i), 10) % 11;
     }
 
-    console.log('Checksum:', checksum);
     let remainder = checksum % 11;
-    console.log('remainder:', remainder);
     validateRemainder(remainder, checkDigit)
     return true;
   } catch (error) {
-    console.log('error:', error)
     return false;
   }
 }
