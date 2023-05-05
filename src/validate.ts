@@ -67,13 +67,11 @@ function validateRemainder(remainder: number, checksum: string): void {
     numCheckSum = parseInt(checksum, 10);
   }
 
-  let valid = false;
   if (remainder !== 0) {
-    remainder = 11 - remainder;  
+    remainder = 11 - remainder;
   }
-  
-  valid = remainder === numCheckSum;
-  if (!valid) {
+
+  if (remainder !== numCheckSum) {
     throw new Error('HK ID check digit is invalid');
   }
 }
