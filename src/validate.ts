@@ -85,7 +85,9 @@ function validateRemainder(remainder: number, checksum: string): void {
 */
 export function validate(hkid: string): boolean {
   try {
-    containsValidCharacters(hkid);
+    if (!containsValidCharacters(hkid)) {
+      return false;
+    }
 
     const normalisedHkid = normalise(hkid);
 
