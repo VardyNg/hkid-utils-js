@@ -1,7 +1,7 @@
 {
   "name": "hkid-utils",
   "version": "1.0.1",
-  "description": "A library to validate Hong Kong ID card number",
+  "description": "A library to handle Hong Kong ID card number",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
