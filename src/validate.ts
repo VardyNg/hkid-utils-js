@@ -58,7 +58,7 @@ function extractCheckDigit(hkid: string, pointer: number): string {
  * @param remainder - The remainder of the HKID.
  * @param checksum - The check digit of the HKID.
  * @throws If the remainder does not match the check digit.
-*/
+ */
 function validateRemainder(remainder: number, checksum: string): void {
   let numCheckSum: number;
   if (checksum === 'A') {
@@ -77,10 +77,10 @@ function validateRemainder(remainder: number, checksum: string): void {
 }
 
 /**
-  * Validates an HKID.
-  * @param hkid - The HKID to validate.
-  * @returns True if the HKID is valid, false otherwise.
-*/
+ * Validates an HKID.
+ * @param hkid - The HKID to validate.
+ * @returns True if the HKID is valid, false otherwise.
+ */
 export function validate(hkid: string): boolean {
   try {
     if (!containsValidCharacters(hkid)) {
