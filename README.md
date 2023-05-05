@@ -29,7 +29,7 @@ hkidUtils.validate('G123456(A)'); // true
 hkidUtils.validate('aB987654(3)'); // true
 hkidUtils.validate('X3459387'); // true
 
-hkidUtils.validate('123(A)4'// false
+hkidUtils.validate('123(A)4')// false
 ```
 
 ## Todo ✅
