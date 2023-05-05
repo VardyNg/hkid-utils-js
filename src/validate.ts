@@ -10,10 +10,7 @@ import {
  */
 function containsValidCharacters(hkid: string): boolean {
   const regex = /^[A-Za-z0-9()]+$/;
-  if (!regex.test(hkid)) {
-    throw new Error('HK ID contains invalid characters');
-  }
-  return true;
+  return regex.test(hkid);
 }
 
 /**
