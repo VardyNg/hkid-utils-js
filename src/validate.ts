@@ -34,6 +34,26 @@ function extractCheckDigit(hkid: string, pointer: number): string {
   return hkid.charAt(pointer);
 }
 
+function validateRemainder(remainder: number, checksum: string){
+  let numCheckSum: number;
+  if (checksum === 'A') {
+    numCheckSum = 10;
+  } else {
+    numCheckSum = parseInt(checksum, 10);
+  }
+
+  let valid = false;
+  if (remainder !== 0) {
+    remainder = 11 - remainder;  
+  }
+  
+  valid = remainder === numCheckSum;
+  console.log('valid:', valid)
+  if (!valid) {
+    throw new Error('HK ID check digit is invalid');
+  }
+}
+
 export function validate(hkid: string): boolean {
   try {
     containsValidCharacters(hkid);
