@@ -56,6 +56,7 @@ function validateRemainder(remainder: number, checksum: string){
 
 export function validate(hkid: string): boolean {
   try {
+    console.log('HK ID:', hkid);
     containsValidCharacters(hkid);
 
     const normalisedHkid = normalise(hkid);
@@ -74,11 +75,35 @@ export function validate(hkid: string): boolean {
     console.log('Numbers:', numbers);
     console.log('Check Digit:', checkDigit);
 
-    // Add validation logic for leading letters, numbers, and check digit
+    let checksum = 0;
+    // calculate checksum for leading letters
+    // According to ASCII table, A = 65, B = 66, C = 67, ..., Z = 90
+    // Therefore, reduce 55 from the ASCII value to get the number
+    if (leadingLetters.length === 2) {
+      checksum += 9 * (leadingLetters.charCodeAt(0) - 55) % 11;
+      console.log(checksum)
+      checksum += 8 * (leadingLetters.charCodeAt(1) - 55) % 11; 
+      console.log(checksum)
+    } else {
+      checksum += 9 * 36 % 11;
+      console.log(checksum)
+      checksum += 8 * (leadingLetters.charCodeAt(0) - 55) % 11;
+      console.log(checksum)
+    }
 
+    // calculate checksum for numbers
+
+    for (var i = 0, j = 7; i < numbers.length; i++, j--){
+      checksum += j * parseInt(numbers.charAt(i), 10) % 11;
+    }
+
+    console.log('Checksum:', checksum);
+    let remainder = checksum % 11;
+    console.log('remainder:', remainder);
+    validateRemainder(remainder, checkDigit)
     return true;
   } catch (error) {
-    console.error(error);
+    console.log('error:', error)
     return false;
   }
 }
