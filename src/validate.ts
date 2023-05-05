@@ -3,6 +3,11 @@ import {
   isCapitalLetter,
 } from './util';
 
+/**
+ * Check if hkid value contains valid characters
+ * @param hkid
+ * @returns true or Error
+ */
 function containsValidCharacters(hkid: string): boolean {
   const regex = /^[A-Za-z0-9()]+$/;
   if (!regex.test(hkid)) {
@@ -11,6 +16,11 @@ function containsValidCharacters(hkid: string): boolean {
   return true;
 }
 
+/**
+ *
+ * @param hkid
+ * @returns string
+ */
 function extractLeadingLetters(hkid: string): string {
   let cap = '';
   const firstChar = hkid.charAt(0);
@@ -26,14 +36,32 @@ function extractLeadingLetters(hkid: string): string {
   return cap;
 }
 
+/**
+ * extract numbers part from hkid
+ * @param hkid
+ * @param pointer
+ * @returns string
+ */
 function extractNumbers(hkid: string, pointer: number): string {
   return hkid.substring(pointer, pointer + 6);
 }
 
+/**
+ * extract check digit from hkid
+ * @param hkid
+ * @param pointer
+ * @returns string
+ */
 function extractCheckDigit(hkid: string, pointer: number): string {
   return hkid.charAt(pointer);
 }
 
+/**
+ * validate remainder against check digit
+ * @param remainder
+ * @param checksum
+ * @returns void or Error
+ */
 function validateRemainder(remainder: number, checksum: string){
   let numCheckSum: number;
   if (checksum === 'A') {
@@ -52,6 +80,12 @@ function validateRemainder(remainder: number, checksum: string){
     throw new Error('HK ID check digit is invalid');
   }
 }
+
+/**
+ * validate HKID
+ * @param hkid
+ * @returns true or false
+ */
 
 export function validate(hkid: string): boolean {
   try {

@@ -1,3 +1,8 @@
+/**
+ * Normalize HKID
+ * @param hkid
+ * @returns {string} normalised HKID
+ */
 export function normalise(hkid: string){
   // set all characters to uppercase
   hkid = hkid.toUpperCase();
