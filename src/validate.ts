@@ -1,6 +1,6 @@
 import {
-  normalise,
   isCapitalLetter,
+  normalise,
 } from './util';
 
 /**
