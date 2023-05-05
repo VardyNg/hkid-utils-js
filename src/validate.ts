@@ -90,7 +90,7 @@ export function validate(hkid: string): boolean {
     const normalisedHkid = normalise(hkid);
 
     if (normalisedHkid.length < 8 || normalisedHkid.length > 9) {
-      throw new Error('HK ID length is invalid');
+      return false;
     }
 
     const leadingLetters = extractLeadingLetters(normalisedHkid);
