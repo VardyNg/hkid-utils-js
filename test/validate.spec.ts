@@ -5,6 +5,7 @@ describe ('test validate function', () => {
     it.each([
       ['G123456(A)'],
       ['AB987654(3)'],
+      ['X3459387'],
     ])('should return true if HKID is valid', (VALID_HKID) => {
       // Act
       const result = validate(VALID_HKID);
