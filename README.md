@@ -1,4 +1,4 @@
-# hkidtoolkit
+# hkid-utils
 
 A JavaScript toolkit for validating Hong Kong Identity Card (HKID) numbers.  
 
@@ -11,25 +11,25 @@ A JavaScript toolkit for validating Hong Kong Identity Card (HKID) numbers.
 ## Installation 📦
 
 ```sh
-npm install hkidtoolkit
+npm install hkid-utils
 ```
 
 or   
 ```sh
-yarn add hkidtoolkit
+yarn add hkid-utils
 ```
 
 ## Usage
 
 ```javascript
-const hkidtoolkit = require('hkidtoolkit');
+const hkidUtils = require('hkid-utils');
 
 // Validate HKID number
-hkidtoolkit.validate('G123456(A)'); // true
-hkidtoolkit.validate('aB987654(3)'); // true
-hkidtoolkit.validate('X3459387'); // true
+hkidUtils.validate('G123456(A)'); // true
+hkidUtils.validate('aB987654(3)'); // true
+hkidUtils.validate('X3459387'); // true
 
-hkidtoolkit.validate('123(A)4'// false
+hkidUtils.validate('123(A)4'// false
 ```
 
 ## Todo ✅

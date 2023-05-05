@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VardyNg/hkidtoolkit-js.git"
+    "url": "git+https://github.com/VardyNg/hkid-utils-js.git"
   },
   "keywords": [],
   "author": "VardyNg",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VardyNg/hkidtoolkit-js/issues"
+    "url": "https://github.com/VardyNg/hkid-utils-js/issues"
   },
-  "homepage": "https://github.com/VardyNg/hkidtoolkit-js#readme",
+  "homepage": "https://github.com/VardyNg/hkid-utils-js#readme",
   "devDependencies": {
     "@types/jest": "^22.2.3",
     "codecov": "^3.1.0",
