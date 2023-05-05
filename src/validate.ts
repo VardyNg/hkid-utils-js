@@ -20,13 +20,12 @@ function containsValidCharacters(hkid: string): boolean {
  * @throws If the HKID does not start with a capital letter.
  */
 function extractLeadingLetters(hkid: string): string {
-  let cap = '';
   const firstChar = hkid.charAt(0);
-  if (isCapitalLetter(firstChar)) {
-    cap += firstChar;
-  } else {
+  if (!isCapitalLetter(firstChar)) {
     throw new Error('HK ID does not start with a letter');
   }
+
+  let cap = firstChar;
   const secondChar = hkid.charAt(1);
   if (isCapitalLetter(secondChar)) {
     cap += secondChar;
