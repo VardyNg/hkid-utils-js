@@ -112,7 +112,7 @@ export function validate(hkid: string): boolean {
     }
 
     // calculate checksum for numbers
-    for (var i = 0, j = 7; i < numbers.length; i++, j--){
+    for (let i = 0, j = 7; i < numbers.length; i++, j--){
       checksum += j * parseInt(numbers.charAt(i), 10) % 11;
     }
 
