@@ -27,7 +27,7 @@ hkidvalidator.validate('123(A)4'// false
 
 ## Todo ✅
 - Main Features
-  - [ * ] Validate HKID number
+  - [x] Validate HKID number
   - [ ] Generate random HKID number
 - DevOps
   - [ ] GitHub Actions pipeline to release package to NPM
