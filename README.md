@@ -1,6 +1,6 @@
 # hkidvalidator
 
-A JavaScript library for validating Hong Kong Identity Card (HKID) numbers.  
+A JavaScript toolkit for validating Hong Kong Identity Card (HKID) numbers.  
 
 ## Features 🤖
 
