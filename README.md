@@ -10,7 +10,14 @@ A JavaScript toolkit for validating Hong Kong Identity Card (HKID) numbers.
 
 ## Installation 📦
 
-<i>to be added when released...</i>
+```sh
+npm install hkidvalidator
+```
+
+or   
+```sh
+yarn add hkidvalidator
+```
 
 ## Usage
 
