@@ -39,7 +39,7 @@ hkidUtils.validate('123(A)4')// false
 - DevOps
   - [ ] GitHub Actions pipeline to release package to NPM
 ## Contribution guidelines 📝
-
+Your contributions are always welcome! Even if it's just a typo or a missing comma, we'll appreciate it.
 - Fork the repository 🍴
 - Create a branch with your feature or bug fix 🎋
 - Commit your changes 💽
