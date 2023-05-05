@@ -26,7 +26,12 @@ jobs:
       - name: Build package
         run: npm run build
 
+      - name: Login to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm login --registry=https://registry.npmjs.org/ --scope=@<scope> --always-auth --auth-type=oauth
+
       - name: Publish to NPM
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish
