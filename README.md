@@ -38,6 +38,10 @@ hkidUtils.validate('123(A)4')// false
   - [ ] Generate random HKID number
 - DevOps
   - [x] GitHub Actions pipeline to release package to NPM
+- Compatibility
+  - [x] ES5 (NodeJS)
+  - [ ] ES6 (Browser)
+
 ## Contribution guidelines 📝
 Your contributions are always welcome! Even if it's just a typo or a missing comma, we'll appreciate it.
 - Fork the repository 🍴
