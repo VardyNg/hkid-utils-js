@@ -30,6 +30,9 @@ hkidUtils.validate('aB987654(3)'); // true
 hkidUtils.validate('X3459387'); // true
 
 hkidUtils.validate('123(A)4') // false
+
+// Generate random HKID number
+hkidUtils.random(); // 'A123456(7)'
 ```
 
 ## Todo ✅
