@@ -1,6 +1,7 @@
 # hkid-utils
 
-A JavaScript toolkit for validating Hong Kong Identity Card (HKID) numbers.  
+A JavaScript toolkit to handle Hong Kong Identity Card (HKID) numbers, validate and generate random HKID numbers.
+ 
 
 ## Features 🤖
 
