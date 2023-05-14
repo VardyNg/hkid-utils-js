@@ -19,7 +19,14 @@
     "type": "git",
     "url": "git+https://github.com/VardyNg/hkid-utils-js.git"
   },
-  "keywords": [],
+  "keywords": [
+    "hkid",
+    "hong kong id",
+    "validate",
+    "random",
+    "generate",
+    "id"
+  ],
   "author": "VardyNg",
   "license": "MIT",
   "bugs": {
