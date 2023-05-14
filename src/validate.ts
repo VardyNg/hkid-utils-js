@@ -1,7 +1,7 @@
 import {
+  calculateChecksum,
   isCapitalLetter,
   normalise,
-  calculateChecksum,
 } from './util';
 
 /**
