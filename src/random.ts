@@ -33,5 +33,11 @@ export function random(config: any): string {
   } else {
     checkDigit = remainder.toString();
   }
+  
+  // return HKID with no brackets if config.includeBrackets is explicitly set to false
+  if (config.hasOwnProperty('includeBrackets' && !config.includeBrackets)) {
+    return `${leadingLetters}${numbers}${checkDigit}`;
+  }
+  // return HKID with brackets by default
   return `${leadingLetters}${numbers}(${checkDigit})`;
 }
