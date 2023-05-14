@@ -1,6 +1,6 @@
 {
   "name": "hkid-utils",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A library to handle Hong Kong ID card number",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -19,7 +19,14 @@
     "type": "git",
     "url": "git+https://github.com/VardyNg/hkid-utils-js.git"
   },
-  "keywords": [],
+  "keywords": [
+    "hkid",
+    "hong kong id",
+    "validate",
+    "random",
+    "generate",
+    "id"
+  ],
   "author": "VardyNg",
   "license": "MIT",
   "bugs": {
