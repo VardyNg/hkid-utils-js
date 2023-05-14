@@ -7,7 +7,7 @@ A JavaScript toolkit for validating Hong Kong Identity Card (HKID) numbers.
 - Validate HKID number
   - Supports brackets! `()`
   - No matter what case `aAbC`
-
+- Generate Random HKID
 ## Installation 📦
 
 ```sh
