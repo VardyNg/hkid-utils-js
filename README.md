@@ -38,7 +38,9 @@ hkidUtils.random(); // 'A123456(7)'
 ## Todo ✅
 - Main Features
   - [x] Validate HKID number
-  - [ ] Generate random HKID number
+  - [x] Generate random HKID number
+    - [ ] with "includeBrackets" option
+
 - DevOps
   - [x] GitHub Actions pipeline to release package to NPM
 - Compatibility
