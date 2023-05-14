@@ -19,7 +19,7 @@ or
 ```sh
 yarn add hkid-utils
 ```
-
+## [NPM Package 📦](https://www.npmjs.com/package/hkid-utils)
 ## Usage
 
 ```javascript
