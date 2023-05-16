@@ -4,9 +4,11 @@ import {
 
 /**
  * generate random HKID
+ * @param config - config object
+ * @param config.includeBrackets - whether to include brackets
  * @returns string of random HKID
  */
-export function random(): string {
+export function random(config: any): string {
   // generate random HKID
   // decide how many leading characters to generate
   const leadingLettersLength = Math.random() > 0.5 ? 1 : 2;
@@ -31,5 +33,11 @@ export function random(): string {
   } else {
     checkDigit = remainder.toString();
   }
+  
+  // return HKID with no brackets if config.includeBrackets is explicitly set to false
+  if (config.hasOwnProperty('includeBrackets' && !config.includeBrackets)) {
+    return `${leadingLetters}${numbers}${checkDigit}`;
+  }
+  // return HKID with brackets by default
   return `${leadingLetters}${numbers}(${checkDigit})`;
 }
