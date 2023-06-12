@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/hkid-utils.svg)](https://badge.fury.io/js/hkid-utils)
+![NPM](https://img.shields.io/npm/l/hkid-utils)
 # hkid-utils
 
 A JavaScript toolkit to handle Hong Kong Identity Card (HKID) numbers, validate and generate random HKID numbers.
